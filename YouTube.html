@@ -8,6 +8,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="./YouTube.css">
     <script src="https://kit.fontawesome.com/02b04573cb.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 </head>
 
@@ -307,13 +309,13 @@
                         <p>김김</p>
                     </div>
                     <div class="qqq">
-                        <input type="text" placeholder="댓글">
+                        <input id="comment" type="text" placeholder="댓글">
 
                         <div class="comment-btn flex-center">
                             <i class="fa-regular fa-face-laugh"></i>
                             <div class="comment-plus">
                                 <button>취소</button>
-                                <button>댓글</button>
+                                <button onclick="comment()">댓글</button>
                             </div>
                         </div>
                     </div>
@@ -321,7 +323,7 @@
 
                 <div class="box flex-center">
 
-                    <div class="flex-col">
+                    <div class="flex-col my">
 
                         <div class="flex-center">
                             <div class="me-comment" style="background-color: blue;">
@@ -571,29 +573,6 @@
         </div>
     </div>
 
-    <!-- <div class="comment com-width">
-        <div class="flex">
-            <p class="padding-5">댓글 5,890개</p>
-            <p class="padding-5">정렬 기준</p>
-        </div>
-
-        <div class="flex">
-            <a href=""></a>
-        </div>
-    </div> -->
-
-
-    <!-- <div class="qqq">
-        <input id="comment" type="text" placeholder="댓글">
-
-        <div class="comment-btn flex-center">
-            <i class="fa-regular fa-face-laugh"></i>
-            <div class="comment-plus">
-                <button>취소</button>
-                <button onclick="comment()">댓글</button>
-            </div>
-        </div>
-    </div> -->
 
     <script>
         var subscribe = document.querySelector('.subscribe');
@@ -608,12 +587,31 @@
             subscribe.style.display = 'block'
         })
 
-        // function comment () {
-        //     let inpu = document.getElementById('comment').value;
-        //     console.log(inpu);
-        //     document.getElementsByClassName('qqq').innerHTML = inpu
-        // }
-        
+        function comment() {
+            let inpu = document.getElementById('comment').value;
+            console.log(inpu);
+
+            $('.my').prepend(`      
+                        <div class="flex-center">
+                            <div class="me-comment" >
+                                <p>김김</p>
+                            </div>
+                            <div class="flex-col commentss">
+                                <p><strong>김김</strong> 1초전</p>
+                                <p>${inpu}</p>
+
+                                <div class="good flex-center">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>1</span>
+                                    <i class="fa-solid fa-thumbs-down"></i>
+                                    <span>답글</span>
+                                </div>
+                            </div>
+                        </div>`)
+
+
+        }
+
     </script>
 
 </body>
