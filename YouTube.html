@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./YouTube.css">
+    <script src="https://kit.fontawesome.com/02b04573cb.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <style>
+        * {
+            list-style: none;
+        }
+
+        body {
+            /* background-color : #030303; */
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .header {
+            background-color: black;
+            height: 35px;
+        }
+
+        .logo {
+            height: 100%;
+            align-items: center;
+        }
+
+        .logo i {
+            color: red;
+        }
+
+        .logo a {
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .header-side {
+            align-items: center;
+            margin-left: auto;
+        }
+
+        .header-side a {
+            color: #fff;
+        }
+
+        .fa-ellipsis-vertical {
+            margin-right: 5px;
+        }
+
+        .btn {
+            justify-content: space-around;
+            font-size: 23px;
+        }
+
+        .btn a {
+            color: gray;
+        }
+
+        .btn p {
+            font-size: 10px;
+        }
+
+        .btn a:hover {
+            color: blue;
+        }
+
+        img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .name {
+            align-items: center;
+            padding-top: 10px;
+            border-bottom: 0.8px solid rgba(0, 0, 0, 0.528);
+            border-top: 0.8px solid rgba(0, 0, 0, 0.528);
+
+        }
+
+        .na:first-child {
+            font-weight: bold;
+        }
+
+        .gu {
+            margin-left: auto;
+        }
+
+        .gu button {
+            border: 0;
+            outline: 0;
+            width: 60px;
+            height: 35px;
+            font-weight: bold;
+            border-radius: 7%;
+        }
+
+        .next-video {
+            /* flex-direction: column; */
+        }
+
+        .subscribe-ing {
+            display: none;
+        }
+
+        .pc-nav {
+            border-bottom: 1px solid #ccc;
+            background-color: white;
+            width: 100%;
+            height: 60px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .pc-logo {
+            font-size: 30px;
+        }
+
+        .pc-logo * {
+            margin-left: 5px;
+        }
+
+        .fa-youtube {
+            color: red;
+            margin-bottom: 8px;
+        }
+
+        .pc-logo a {
+            font-weight: bold;
+            color: black;
+        }
+
+        .pc-serch {
+            margin-right: 100px;
+        }
+
+        .serch-box {
+            border: 1px solid #ccc;
+            width: 300px;
+            height: 40px;
+        }
+
+        .serch-box input {
+            border: none;
+            width: 100%;
+            height: 100%;
+            /* margin-top: 5px; */
+        }
+
+        .pc-serch button {
+            height: 40px;
+            width: 60px;
+            background-color: white;
+            border: 1px solid #ccc;
+        }
+
+        .bell *:not(p) {
+            margin-right: 15px;
+        }
+
+        .bell i {
+            font-size: 24px;
+        }
+
+        .me {
+            background-color: green;
+            width: 40px;
+            height: 40px;
+            border-radius: 40px;
+            text-align: center;
+        }
+
+        .me p {
+            margin-top: 8px;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+
+    <div class="pc-nav flex">
+        <div class="pc-logo flex-center">
+            <i class="fa-solid fa-bars"></i>
+            <a href="#"><i class="fa-brands fa-youtube"></i> YouTube</a>
+        </div>
+
+        <div class="pc-serch flex-center">
+
+            <div class="serch-box">
+                <input type="text" placeholder="검색">
+            </div>
+            <button><i class="fa-solid fa-magnifying-glass" style="font-size: 20px; color:grey">&nbsp;</i></button>
+        </div>
+
+
+        <div class="bell flex-center">
+            <i class="fa-solid fa-plus"></i>
+            <i class="fa-regular fa-bell"></i>
+            <!-- <a href="#"><i class="fa-brands fa-youtube"></i> YouTube</a> -->
+            <div class="me">
+                <p>김김</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="com" style="">
+
+
+        <div class="com-width" style="">
+            <div class="sticky" style="">
+
+                <div class="m-nav header width-100 border flex">
+                    <div class="logo flex">
+                        <a href=""><i class="fa-brands fa-youtube"></i> YouTube</a>
+                    </div>
+
+                    <div class="header-side flex">
+                        <a href=""><i class="fa-solid fa-magnifying-glass">&nbsp;</i></a>
+                        <a href=""> <i class="fa-solid fa-ellipsis-vertical"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="main-video com-max-height">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/eN5mG_yMDiM"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div>
+                <div class="introduce" style="">
+                    <div class="tag"></div>
+                    <P style="margin-left: 2px; font-size: 13px; color: rgba(0, 0, 255, 0.568);">뮤직비디오 인기 1위</P>
+                    <div class="title padding-3 float-x">
+                        <p>BIGBANG - '봄여름가을겨울 (Still Life)' M/V
+                            <a href="" class="right" style="margin-right: 2px;"><i
+                                    class="fa-solid fa-angle-down"></i></a>
+                    </div>
+
+                    <div class="view padding-5">
+                        <p style="font-size: 13px;">조회수 50,983,037회..</p>
+                    </div>
+                </div>
+
+                <div class="padding-5" style="">
+                    <ul class="btn flex">
+                        <li><a href=""><i class="fa-solid fa-thumbs-up"></i></a>
+                            <p>1K</p>
+                        </li>
+                        <li><a href=""><i class="fa-solid fa-thumbs-down"></i></a>
+                            <p>0</p>
+                        </li>
+                        <li><a href=""><i class="fa-solid fa-share"></i></a>
+                            <p>Share</p>
+                        </li>
+                        <li><a href=""><i class="fa-solid fa-plus"></i></a>
+                            <p>Save</p>
+                        </li>
+                        <li><a href=""><i class="fa-solid fa-flag"></i></a>
+                            <p>Report</p>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="name flex" style="margin-top: 10px;">
+                    <div class="pic padding-3">
+                        <img src="./bigbang-logo2.png" alt="">
+                    </div>
+
+                    <div class="na" style="padding-left: 8px;">
+                        <p>BIGBANG</p>
+                        <p>구독자 1470만명</p>
+                    </div>
+
+                    <div class="gu">
+                        <button class="subscribe" style="background-color: red; color: #fff;">구독</button>
+                        <button class="subscribe-ing" style="background-color: #ddd; color: black;">구독중..</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comment pc-comment flex-col">
+                <div class="flex">
+                    <p class="padding-5">댓글 5,890개</p>
+                    <div class="flex-center">
+                        <i class="fa-solid fa-bars"></i>
+                        <p class="padding-5">정렬 기준</p>
+                    </div>
+                </div>
+
+                <div class="comment-box flex">
+                    <div class="me-comment">
+                        <p>김김</p>
+                    </div>
+                    <div class="qqq">
+                        <input type="text" placeholder="댓글">
+
+                        <div class="comment-btn flex-center">
+                            <i class="fa-regular fa-face-laugh"></i>
+                            <div class="comment-plus">
+                                <button>취소</button>
+                                <button>댓글</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box flex-center">
+
+                    <div class="flex-col">
+
+                        <div class="flex-center">
+                            <div class="me-comment" style="background-color: blue;">
+                                <p>현아</p>
+                            </div>
+                            <div class="flex-col commentss">
+                                <p><strong>현아</strong> 3시간전</p>
+                                <p>빅뱅 오빠들 멋저여 저랑 결혼해주세요오오오오오오</p>
+
+                                <div class="good flex-center">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>1</span>
+                                    <i class="fa-solid fa-thumbs-down"></i>
+                                    <span>답글</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex-center">
+                            <div class="me-comment" style="background-color: #ddd;">
+                                <p>BQ</p>
+                            </div>
+                            <div class="flex-col commentss">
+                                <p><strong>BQ</strong> 18시간전</p>
+                                <p>진짜 준내멋있네</p>
+
+                                <div class="good flex-center">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>3.7천</span>
+                                    <i class="fa-solid fa-thumbs-down"></i>
+                                    <span>답글</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex-center">
+                            <div class="me-comment" style="background-color: plum;">
+                                <p>리우</p>
+                            </div>
+                            <div class="flex-col commentss">
+                                <p><strong>리우</strong> 1일전</p>
+                                <p>빅뱅노래는 ㄹㅇ 띵곡만 나오는듯</p>
+
+                                <div class="good flex-center">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>127</span>
+                                    <i class="fa-solid fa-thumbs-down"></i>
+                                    <span>답글</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="com-right">
+            <div class="next padding-5 flex-center" style="">
+                <div class="next-content flex-center">
+                    <p>모두</p>
+                </div>
+                <div class="next-content flex-center">
+                    <p>관련컨텐츠</p>
+                </div>
+                <div class="next-content flex-center">
+                    <p>BIGBANG 유튜브 제공</p>
+                </div>
+            </div>
+
+            <div class="next ">
+
+
+                <div class="first padding-5">
+                    <ul class="flex " style="margin-top: 4px;">
+                        <li><iframe width="180" height="100" src="https://www.youtube.com/embed/--zku6TB5NY"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe></li>
+                        <li style="margin-left: 10px;">
+                            <a href="">BIGBANG - 'LAST DANCE' M/V</a>
+                            <br><br>
+                            <p>BIGBANG</p>
+                            <p>조회수 1.2억회 - 5년전</p>
+                        </li>
+                    </ul>
+
+                    <ul class="flex" style="margin-top: 4px;">
+                        <li><iframe width="180" height="100" src="https://www.youtube.com/embed/fJdKntJCz7o"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe></li>
+                        <li style="margin-left: 10px;">
+                            <a href="">IF YOU</a>
+                            <br><br>
+                            <p>BIGBANG</p>
+                            <p>조회수 315만회 - 5년전</p>
+                        </li>
+                    </ul>
+
+                    <ul class="flex" style="margin-top: 4px;">
+                        <li><iframe width="180" height="100" src="https://www.youtube.com/embed/9kaCAbIXuyg"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe></li>
+                        <li style="margin-left: 10px;">
+                            <a href="">G-DRAGON - 무제(無題) (Untitled, 2014) M/V</a>
+                            <br><br>
+                            <p>BIGBANG</p>
+                            <p>조회수 1.3억회 - 4년전</p>
+                        </li>
+                    </ul>
+
+                    <ul class="flex" style="margin-top: 4px;">
+                        <li><iframe width="180" height="100" src="https://www.youtube.com/embed/Q0CAyya3I8o"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe></li>
+                        <li style="margin-left: 10px;">
+                            <a href="">2시간 | 빅뱅 (BIGBANG) - 봄여름가을겨울( Still Life | 2 Hour Loop )</a>
+                            <br><br>
+                            <p>Wslife Studio</p>
+                            <p>조회수 2.4만회 - 2주전</p>
+                        </li>
+                    </ul>
+
+                    <ul class="flex" style="margin-top: 4px;">
+                        <li><iframe width="180" height="100" src="https://www.youtube.com/embed/MBNQgq56egk"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe></li>
+                        <li style="margin-left: 10px;">
+                            <a href="">BIGBANG - 맨정신(SOBER) M/V</a>
+                            <br><br>
+                            <p>BIGBANG</p>
+                            <p>조회수 1.4억회 - 6년전</p>
+                        </li>
+                    </ul>
+
+                    <ul class="flex" style="margin-top: 4px;">
+                        <li><iframe width="180" height="100" src="https://www.youtube.com/embed/GR6WtaUz47o"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe></li>
+                        <li style="margin-left: 10px;">
+                            <a href="">[빅뱅] 눈치 안보는 패배 때문에 빡친 태양</a>
+                            <br><br>
+                            <p>유튜브 경묵</p>
+                            <p>조회수 10억회 - 10년전</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="comment m-comment flex-col">
+        <div class="flex">
+            <p class="padding-5">댓글 5,890개</p>
+            <div class="flex-center">
+                <i class="fa-solid fa-bars"></i>
+                <p class="padding-5">정렬 기준</p>
+            </div>
+        </div>
+
+        <div class="comment-box flex">
+            <div class="me-comment">
+                <p>김김</p>
+            </div>
+            <div class="qqq">
+                <input type="text" placeholder="댓글">
+
+                <div class="comment-btn flex-center">
+                    <i class="fa-regular fa-face-laugh"></i>
+                    <div class="comment-plus">
+                        <button>취소</button>
+                        <button>댓글</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box flex-center">
+
+            <div class="flex-col">
+
+                <div class="flex-center">
+                    <div class="me-comment" style="background-color: blue;">
+                        <p>현아</p>
+                    </div>
+                    <div class="flex-col commentss">
+                        <p><strong>현아</strong> 3시간전</p>
+                        <p>빅뱅 오빠들 멋저여 저랑 결혼해주세요오오오오오오</p>
+
+                        <div class="good flex-center">
+                            <i class="fa-solid fa-thumbs-up"></i>
+                            <span>1</span>
+                            <i class="fa-solid fa-thumbs-down"></i>
+                            <span>답글</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-center">
+                    <div class="me-comment" style="background-color: #ddd;">
+                        <p>BQ</p>
+                    </div>
+                    <div class="flex-col commentss">
+                        <p><strong>BQ</strong> 18시간전</p>
+                        <p>진짜 준내멋있네</p>
+
+                        <div class="good flex-center">
+                            <i class="fa-solid fa-thumbs-up"></i>
+                            <span>3.7천</span>
+                            <i class="fa-solid fa-thumbs-down"></i>
+                            <span>답글</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-center">
+                    <div class="me-comment" style="background-color: plum;">
+                        <p>리우</p>
+                    </div>
+                    <div class="flex-col commentss">
+                        <p><strong>리우</strong> 1일전</p>
+                        <p>빅뱅노래는 ㄹㅇ 띵곡만 나오는듯</p>
+
+                        <div class="good flex-center">
+                            <i class="fa-solid fa-thumbs-up"></i>
+                            <span>127</span>
+                            <i class="fa-solid fa-thumbs-down"></i>
+                            <span>답글</span>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- <div class="comment com-width">
+        <div class="flex">
+            <p class="padding-5">댓글 5,890개</p>
+            <p class="padding-5">정렬 기준</p>
+        </div>
+
+        <div class="flex">
+            <a href=""></a>
+        </div>
+    </div> -->
+
+
+    <!-- <div class="qqq">
+        <input id="comment" type="text" placeholder="댓글">
+
+        <div class="comment-btn flex-center">
+            <i class="fa-regular fa-face-laugh"></i>
+            <div class="comment-plus">
+                <button>취소</button>
+                <button onclick="comment()">댓글</button>
+            </div>
+        </div>
+    </div> -->
+
+    <script>
+        var subscribe = document.querySelector('.subscribe');
+        var subscribe2 = document.querySelector('.subscribe-ing');
+
+        subscribe.addEventListener('click', function () {
+            subscribe.style.display = 'none'
+            subscribe2.style.display = 'block'
+        })
+        subscribe2.addEventListener('click', function () {
+            subscribe2.style.display = 'none'
+            subscribe.style.display = 'block'
+        })
+
+        // function comment () {
+        //     let inpu = document.getElementById('comment').value;
+        //     console.log(inpu);
+        //     document.getElementsByClassName('qqq').innerHTML = inpu
+        // }
+        
+    </script>
+
+</body>
+
+</html>
