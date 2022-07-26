@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./YouTube.css">
     <script src="https://kit.fontawesome.com/02b04573cb.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 </head>
 
@@ -31,6 +31,7 @@
         .header {
             background-color: black;
             height: 35px;
+            flex-direction: row;
         }
 
         .logo {
@@ -52,7 +53,7 @@
             margin-left: auto;
         }
 
-        .header-side a {
+        .header-side i {
             color: #fff;
         }
 
@@ -208,7 +209,6 @@
         <div class="bell flex-center">
             <i class="fa-solid fa-plus"></i>
             <i class="fa-regular fa-bell"></i>
-            <!-- <a href="#"><i class="fa-brands fa-youtube"></i> YouTube</a> -->
             <div class="me">
                 <p>김김</p>
             </div>
@@ -218,18 +218,21 @@
 
     <div class="com" style="">
 
-
         <div class="com-width" style="">
             <div class="sticky" style="">
 
-                <div class="m-nav header width-100 border flex">
-                    <div class="logo flex">
-                        <a href=""><i class="fa-brands fa-youtube"></i> YouTube</a>
-                    </div>
-
-                    <div class="header-side flex">
-                        <a href=""><i class="fa-solid fa-magnifying-glass">&nbsp;</i></a>
-                        <a href=""> <i class="fa-solid fa-ellipsis-vertical"></i></a>
+                <div class="m-nav">
+                    <div class="header width-100 flex">
+            
+                        <div class="logo flex">
+                            <a href=""><i class="fa-brands fa-youtube"></i> YouTube</a>
+                        </div>
+            
+                        <div class="header-side flex-center">
+                            <i class="fa-solid fa-magnifying-glass">&nbsp;</i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                        
                     </div>
                 </div>
 
@@ -295,96 +298,9 @@
                 </div>
             </div>
 
-            <div class="comment pc-comment flex-col">
-                <div class="flex">
-                    <p class="padding-5">댓글 5,890개</p>
-                    <div class="flex-center">
-                        <i class="fa-solid fa-bars"></i>
-                        <p class="padding-5">정렬 기준</p>
-                    </div>
-                </div>
-
-                <div class="comment-box flex">
-                    <div class="me-comment">
-                        <p>김김</p>
-                    </div>
-                    <div class="qqq">
-                        <input id="comment" type="text" placeholder="댓글">
-
-                        <div class="comment-btn flex-center">
-                            <i class="fa-regular fa-face-laugh"></i>
-                            <div class="comment-plus">
-                                <button>취소</button>
-                                <button onclick="comment()">댓글</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="box flex-center">
-
-                    <div class="flex-col my">
-
-                        <div class="flex-center">
-                            <div class="me-comment" style="background-color: blue;">
-                                <p>현아</p>
-                            </div>
-                            <div class="flex-col commentss">
-                                <p><strong>현아</strong> 3시간전</p>
-                                <p>빅뱅 오빠들 멋저여 저랑 결혼해주세요오오오오오오</p>
-
-                                <div class="good flex-center">
-                                    <i class="fa-solid fa-thumbs-up"></i>
-                                    <span>1</span>
-                                    <i class="fa-solid fa-thumbs-down"></i>
-                                    <span>답글</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="flex-center">
-                            <div class="me-comment" style="background-color: #ddd;">
-                                <p>BQ</p>
-                            </div>
-                            <div class="flex-col commentss">
-                                <p><strong>BQ</strong> 18시간전</p>
-                                <p>진짜 준내멋있네</p>
-
-                                <div class="good flex-center">
-                                    <i class="fa-solid fa-thumbs-up"></i>
-                                    <span>3.7천</span>
-                                    <i class="fa-solid fa-thumbs-down"></i>
-                                    <span>답글</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="flex-center">
-                            <div class="me-comment" style="background-color: plum;">
-                                <p>리우</p>
-                            </div>
-                            <div class="flex-col commentss">
-                                <p><strong>리우</strong> 1일전</p>
-                                <p>빅뱅노래는 ㄹㅇ 띵곡만 나오는듯</p>
-
-                                <div class="good flex-center">
-                                    <i class="fa-solid fa-thumbs-up"></i>
-                                    <span>127</span>
-                                    <i class="fa-solid fa-thumbs-down"></i>
-                                    <span>답글</span>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-                    </div>
-
-                </div>
-            </div>
-
         </div>
 
+    
         <div class="com-right">
             <div class="next padding-5 flex-center" style="">
                 <div class="next-content flex-center">
@@ -485,7 +401,9 @@
 
     </div>
 
-    <div class="comment m-comment flex-col">
+    
+
+    <div class="comment flex-col com-width">
         <div class="flex">
             <p class="padding-5">댓글 5,890개</p>
             <div class="flex-center">
@@ -499,13 +417,13 @@
                 <p>김김</p>
             </div>
             <div class="qqq">
-                <input type="text" placeholder="댓글">
+                <input id="comment" type="text" placeholder="댓글">
 
                 <div class="comment-btn flex-center">
                     <i class="fa-regular fa-face-laugh"></i>
                     <div class="comment-plus">
                         <button>취소</button>
-                        <button>댓글</button>
+                        <button onclick="comment()">댓글</button>
                     </div>
                 </div>
             </div>
@@ -513,7 +431,7 @@
 
         <div class="box flex-center">
 
-            <div class="flex-col">
+            <div class="flex-col my">
 
                 <div class="flex-center">
                     <div class="me-comment" style="background-color: blue;">
@@ -565,9 +483,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
             </div>
 
         </div>
@@ -602,7 +517,7 @@
 
                                 <div class="good flex-center">
                                     <i class="fa-solid fa-thumbs-up"></i>
-                                    <span>1</span>
+                                    <span>0</span>
                                     <i class="fa-solid fa-thumbs-down"></i>
                                     <span>답글</span>
                                 </div>

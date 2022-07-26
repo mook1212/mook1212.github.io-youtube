@@ -63,6 +63,7 @@
     margin-right: 10px;
     justify-content: center;
     background-color: #ddd;
+    cursor: pointer;
 }
 .next-content p {
     white-space: nowrap;
@@ -70,11 +71,18 @@
     overflow: hidden;
     margin: 0px 3px;
 }
+.next-content:hover {
+    background-color: black;
+    color: white;
+}
 .comment {
     margin-top: 10px;
 }
+.comment-box {
+    /* width: 100%; */
+}
 .qqq {
-    width: 94%;
+    width: 95%;
 }
 .qqq input {
     border: none;
@@ -101,10 +109,14 @@
 }
 .comment-btn i{
     font-size: 20px;
-    margin-left: 30px;
 }
 .comment-plus {
     margin-left: auto;
+    padding-left: 50px;
+}
+.comment-btn {
+    width: 100%;
+    margin-left: 20px;
 }
 .comment-btn button{
     border: none;
@@ -149,6 +161,11 @@
     .main-video iframe {
         height: 505px;
     }
+    .comment-box {
+        /* width: 100%; */
+        max-width: 1100px;
+    }
+    
 }
 @media (max-width: 800px) {
     .m-nav {
@@ -175,4 +192,5 @@
     .main-video iframe {
         height: 315px;
     }
+    .com-width {}
 }
