@@ -571,7 +571,10 @@
             let inpu = document.getElementById('comment').value;
             console.log(inpu);
 
-            let aa = $('.my').prepend(`      
+            if (inpu == ''){
+                console.log('댓글입력하세요');
+            } else if (inpu != '') {
+                $('.my').prepend(`      
                         <div class="flex-center">
                             <div class="me-comment" >
                                 <p>김김</p>
@@ -587,12 +590,7 @@
                                     <span>답글</span>
                                 </div>
                             </div>
-                        </div>`)
-
-            if (inpu == ''){
-                console.log('댓글입력하세요');
-            } else if (inpu != '') {
-                aa
+                        </div>`);
             }
 
         }
