@@ -262,19 +262,19 @@
 
                 <div class="padding-5" style="">
                     <ul class="btn flex">
-                        <li><a href=""><i class="fa-solid fa-thumbs-up"></i></a>
+                        <li class="Good"><a><i class="fa-solid fa-thumbs-up"></i></a>
                             <p>1K</p>
                         </li>
-                        <li><a href=""><i class="fa-solid fa-thumbs-down"></i></a>
-                            <p>0</p>
+                        <li class="Bad"><a><i class="fa-solid fa-thumbs-down"></i></a>
+                            <p class="Bad-count">0</p>
                         </li>
-                        <li><a href=""><i class="fa-solid fa-share"></i></a>
+                        <li><a><i class="fa-solid fa-share"></i></a>
                             <p>Share</p>
                         </li>
-                        <li><a href=""><i class="fa-solid fa-plus"></i></a>
+                        <li><a><i class="fa-solid fa-plus"></i></a>
                             <p>Save</p>
                         </li>
-                        <li><a href=""><i class="fa-solid fa-flag"></i></a>
+                        <li><a><i class="fa-solid fa-flag"></i></a>
                             <p>Report</p>
                         </li>
                     </ul>
@@ -296,7 +296,43 @@
                         <button class="subscribe-ing" style="background-color: #ddd; color: black;">구독중..</button>
                     </div>
                 </div>
+
+                <div class="pc-comment">
+                    <div class="flex">
+                        <p class="padding-5">댓글 5,890개</p>
+                        <div class="flex-center">
+                            <i class="fa-solid fa-bars"></i>
+                            <p class="padding-5">정렬 기준</p>
+                        </div>
+                    </div>
+
+            
+                    <div class="">
+                        <div class="comment-box flex " >
+                            <div class="me-comment">
+                                <p>김김</p>
+                            </div>
+                        <div style="width: 20px;"></div>
+
+                            <div class="qqq">
+                                <input id="comment" type="text" placeholder="댓글">
+                
+                                <div class="comment-btn flex-center">
+                                    <i class="fa-regular fa-face-laugh"></i>
+                                    <div class="comment-plus">
+                                        <button>취소</button>
+                                        <button onclick="comment()">댓글</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            
+                    </div>
+                </div>
             </div>
+
+            
+            
 
         </div>
 
@@ -404,28 +440,37 @@
     
 
     <div class="comment flex-col com-width">
-        <div class="flex">
-            <p class="padding-5">댓글 5,890개</p>
-            <div class="flex-center">
-                <i class="fa-solid fa-bars"></i>
-                <p class="padding-5">정렬 기준</p>
-            </div>
-        </div>
 
-        <div class="comment-box flex">
-            <div class="me-comment">
-                <p>김김</p>
-            </div>
-            <div class="qqq">
-                <input id="comment" type="text" placeholder="댓글">
+        <div class="m-comment">
 
-                <div class="comment-btn flex-center">
-                    <i class="fa-regular fa-face-laugh"></i>
-                    <div class="comment-plus">
-                        <button>취소</button>
-                        <button onclick="comment()">댓글</button>
+            <div class="flex">
+                <p class="padding-5">댓글 5,890개</p>
+                <div class="flex-center">
+                    <i class="fa-solid fa-bars"></i>
+                    <p class="padding-5">정렬 기준</p>
+                </div>
+            </div>
+    
+            <div class="">
+                <div class="comment-box flex " >
+                    <div class="me-comment">
+                        <p>김김</p>
+                    </div>
+                    <div style="width: 20px;"></div>
+
+                    <div class="qqq">
+                        <input id="comment" type="text" placeholder="댓글">
+        
+                        <div class="comment-btn flex-center">
+                            <i class="fa-regular fa-face-laugh"></i>
+                            <div class="comment-plus">
+                                <button>취소</button>
+                                <button onclick="comment()">댓글</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
+    
             </div>
         </div>
 
@@ -490,6 +535,25 @@
 
 
     <script>
+
+        $('.btn li').click((e)=> {
+            var a = e.target
+            if (a.style.color == 'blue') {
+            a.style.color = 'grey'
+            }else if (a.style.color != 'blue') {
+            a.style.color = 'blue'
+            }
+        })
+        let count = 0
+        $('.Bad').click(() => {
+            count ++
+            if (count % 2 === 0) {
+                $('.Bad-count').html('0')
+            } else if (count % 2 === 1) {
+                $('.Bad-count').html('1')
+            }
+        })
+
         var subscribe = document.querySelector('.subscribe');
         var subscribe2 = document.querySelector('.subscribe-ing');
 
@@ -502,11 +566,12 @@
             subscribe.style.display = 'block'
         })
 
+
         function comment() {
             let inpu = document.getElementById('comment').value;
             console.log(inpu);
 
-            $('.my').prepend(`      
+            let aa = $('.my').prepend(`      
                         <div class="flex-center">
                             <div class="me-comment" >
                                 <p>김김</p>
@@ -524,6 +589,11 @@
                             </div>
                         </div>`)
 
+            if (inpu == ''){
+                console.log('댓글입력하세요');
+            } else if (inpu != '') {
+                aa
+            }
 
         }
 

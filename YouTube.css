@@ -3,6 +3,15 @@
     padding: 0;
     box-sizing: border-box;
 }
+i {
+    cursor: pointer;
+}
+button {
+    cursor: pointer;
+}
+a {
+    cursor: pointer;
+}
 
 .border {
     border: 1px solid black;
@@ -79,15 +88,15 @@
     margin-top: 10px;
 }
 .comment-box {
-    /* width: 100%; */
+    max-width: 1100px;
 }
 .qqq {
-    width: 95%;
+    width: 100%;
 }
 .qqq input {
     border: none;
     border-bottom: 1px solid grey;
-    margin-left: 20px;
+    /* margin-left: 10px; */
     width: 100%;
     height: 40px;
 }
@@ -116,7 +125,7 @@
 }
 .comment-btn {
     width: 100%;
-    margin-left: 20px;
+    /* margin-left: 20px; */
 }
 .comment-btn button{
     border: none;
@@ -139,6 +148,9 @@
 .good * {
     padding-right: 15px;
 }
+.pc-comment {
+    margin-top: 20px;
+}
 
 @media (min-width: 800px) {
     .com {
@@ -148,6 +160,9 @@
     .com-width {
         width: 1100px;
         margin-left: 90px;
+    }
+    .width1100 {
+        width: 1100px;
     }
     .m-nav {
         display: none;
