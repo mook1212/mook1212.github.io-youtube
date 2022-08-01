@@ -459,7 +459,7 @@
                     <div style="width: 20px;"></div>
 
                     <div class="qqq">
-                        <input id="comment" type="text" placeholder="댓글">
+                        <input id="comment2" type="text" placeholder="댓글">
         
                         <div class="comment-btn flex-center">
                             <i class="fa-regular fa-face-laugh"></i>
@@ -569,11 +569,12 @@
 
         function comment() {
             let inpu = document.getElementById('comment').value;
-            console.log(inpu);
+            let inpu2 = document.getElementById('comment2').value;
 
             if (inpu == ''){
                 console.log('댓글입력하세요');
-            } else if (inpu != '') {
+            }
+            if (inpu != '') {
                 $('.my').prepend(`      
                         <div class="flex-center">
                             <div class="me-comment" >
@@ -591,6 +592,28 @@
                                 </div>
                             </div>
                         </div>`);
+                document.getElementById('comment').value = ''
+            }
+            if (inpu2 != '') {
+                $('.my').prepend(`      
+                        <div class="flex-center">
+                            <div class="me-comment" >
+                                <p>김김</p>
+                            </div>
+                            <div class="flex-col commentss">
+                                <p><strong>김김</strong> 1초전</p>
+                                <p>${inpu2}</p>
+
+                                <div class="good flex-center">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>0</span>
+                                    <i class="fa-solid fa-thumbs-down"></i>
+                                    <span>답글</span>
+                                </div>
+                            </div>
+                        </div>`);
+                document.getElementById('comment2').value = ''
+
             }
 
         }
