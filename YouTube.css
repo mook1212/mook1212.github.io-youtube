@@ -180,7 +180,9 @@ a {
         /* width: 100%; */
         max-width: 1100px;
     }
-    
+    .com-right {
+        margin-left: 25px;
+    }
 }
 @media (max-width: 800px) {
     .m-nav {
